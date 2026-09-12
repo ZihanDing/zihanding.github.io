@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zihan Ding</title>
-<meta name="description" content="Zihan Ding — PhD student in Computer Science at Stony Brook University, working on human-centered AI for clinical decision support.">
+<meta name="description" content="Zihan Ding — PhD candidate in Computer Science at Stony Brook University, working on human-centered AI for clinical decision support.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
 <style>
   :root {
@@ -75,7 +75,7 @@
     background: var(--rule);
   }
 
-  .masthead-text { min-width: 0; }
+  .masthead-text { flex: 1; min-width: 0; }
 
   @media (max-width: 34rem) {
     .masthead {
@@ -83,7 +83,7 @@
       align-items: flex-start;
       gap: 1.25rem;
     }
-    .avatar { width: 104px; height: 104px; }
+    .avatar { width: 104px; height: 104px; order: -1; }
   }
 
   h1 {
@@ -133,6 +133,27 @@
 
   p { margin: 0 0 1rem; }
   p:last-child { margin-bottom: 0; }
+
+  /* ---------- 边注 ---------- */
+
+  .note {
+    border-left: 2px solid var(--rule);
+    padding-left: 1.25rem;
+    margin: 0 0 3rem;
+  }
+  .note-label {
+    display: block;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: .4rem;
+  }
+  .note p {
+    font-size: .925rem;
+    color: var(--mute);
+  }
 
   /* ---------- research themes ---------- */
 
@@ -194,11 +215,10 @@
 
   <header>
     <div class="masthead">
-      <img class="avatar" src="photo.jpg" alt="Zihan Ding" width="130" height="130">
       <div class="masthead-text">
         <h1>Zihan Ding</h1>
         <p class="tagline">
-          PhD student in Computer Science, Stony Brook University.<br>
+          PhD candidate in Computer Science, Stony Brook University.<br>
           Human-centered AI for clinical decision support.
         </p>
         <ul class="links">
@@ -209,12 +229,13 @@
           <li><a href="https://github.com/ZihanDing">GitHub</a></li>
         </ul>
       </div>
+      <img class="avatar" src="photo.jpg" alt="Zihan Ding" width="130" height="130">
     </div>
   </header>
 
   <section id="about">
     <p>
-      I am a PhD student in the Department of Computer Science at
+      I am a PhD candidate in the Department of Computer Science at
       <a href="https://www.stonybrook.edu/">Stony Brook University</a>, advised by
       <a href="https://www3.cs.stonybrook.edu/~fuswang/">Fusheng Wang</a>.
     </p>
@@ -225,6 +246,16 @@
       patients and clinicians who will use them.
     </p>
   </section>
+
+  <aside class="note">
+    <span class="note-label">Beyond research</span>
+    <p>
+      Away from the screen I climb, and music runs underneath most of my days — the kind
+      that makes a long afternoon of debugging survivable. I pay probably unreasonable
+      attention to the small mechanics of everyday life: what I cook, how a room is put
+      together, what makes a morning good.
+    </p>
+  </aside>
 
   <section id="research">
     <h2>Research</h2>
