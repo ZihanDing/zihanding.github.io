@@ -68,6 +68,7 @@
 
   .avatar {
     flex: none;
+    margin-right: 1.5rem;
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -83,7 +84,7 @@
       align-items: flex-start;
       gap: 1.25rem;
     }
-    .avatar { width: 104px; height: 104px; order: -1; }
+    .avatar { width: 104px; height: 104px; order: -1; margin-right: 0; }
   }
 
   h1 {
@@ -133,6 +134,26 @@
 
   p { margin: 0 0 1rem; }
   p:last-child { margin-bottom: 0; }
+
+  /* ---------- 正文两端对齐 ---------- */
+
+  #about p,
+  .note p,
+  .theme p {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  @media (max-width: 34rem) {
+    #about p,
+    .note p,
+    .theme p {
+      text-align: left;
+      -webkit-hyphens: manual;
+      hyphens: manual;
+    }
+  }
 
   /* ---------- 边注 ---------- */
 
