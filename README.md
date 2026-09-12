@@ -6,8 +6,8 @@
 index.html       整站（内容 + 样式都在这一个文件里）
 cv.pdf           CV，从 ../CV_zhd_HCI/cv_hcai.pdf 复制而来
 photo.jpg        头像，512x512，已裁剪压缩并清除 EXIF
-photo-wide.jpg   备用头像，构图更松（带肩膀），想换就把 index.html 里的 src 改掉
-0J8A9631.JPG     相机原图，已在 .gitignore 里，不会被发布
+photo-formal.jpg 备用头像（正式证件照风格），想换就把 index.html 里的 src 改掉
+*.JPG            手机/相机原图，已在 .gitignore 里，不会被发布
 ```
 
 ## 本地预览
