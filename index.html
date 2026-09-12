@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zihan Ding</title>
+<meta name="description" content="Zihan Ding — PhD student in Computer Science at Stony Brook University, working on human-centered AI for clinical decision support.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
+<style>
+  :root {
+    --bg:   #fdfdfc;
+    --fg:   #1a1a18;
+    --mute: #6b6b66;
+    --rule: #e4e4e0;
+    --link: #1a1a18;
+    --accent: #8a5a2b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:   #131312;
+      --fg:   #e8e8e4;
+      --mute: #94948d;
+      --rule: #2b2b28;
+      --link: #e8e8e4;
+      --accent: #cfa06a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ---------- header ---------- */
+
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    margin: 0 0 3rem;
+  }
+
+  .avatar {
+    flex: none;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--rule);
+  }
+
+  .masthead-text { min-width: 0; }
+
+  @media (max-width: 34rem) {
+    .masthead {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .avatar { width: 104px; height: 104px; }
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 .35rem;
+  }
+
+  .tagline {
+    color: var(--mute);
+    margin: 0;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1rem;
+    font-size: .9rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* ---------- sections ---------- */
+
+  section { margin: 0 0 3rem; }
+
+  h2 {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin: 0 0 1.1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-size: .95rem;
+    font-weight: 600;
+    margin: 2rem 0 .9rem;
+    color: var(--mute);
+  }
+  h3:first-of-type { margin-top: 0; }
+
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- research themes ---------- */
+
+  .theme { margin: 0 0 1.4rem; }
+  .theme:last-child { margin-bottom: 0; }
+  .theme-title { font-weight: 600; }
+  .theme p { margin: .1rem 0 0; color: var(--mute); }
+
+  /* ---------- publications ---------- */
+
+  .pub { margin: 0 0 1.3rem; }
+  .pub:last-child { margin-bottom: 0; }
+  .pub-title { display: block; }
+  .pub-meta {
+    display: block;
+    font-size: .875rem;
+    color: var(--mute);
+    margin-top: .15rem;
+  }
+  .me { font-weight: 600; color: var(--fg); }
+
+  /* ---------- dated rows (experience, education) ---------- */
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin: 0 0 1.1rem;
+  }
+  .row:last-child { margin-bottom: 0; }
+  .row-main { flex: 1; }
+  .row-main p { margin: .1rem 0 0; font-size: .9rem; color: var(--mute); }
+  .row-date {
+    flex: none;
+    font-size: .85rem;
+    color: var(--mute);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (max-width: 34rem) {
+    .wrap { padding-top: 3rem; }
+    .row { flex-direction: column; gap: 0; }
+    .row-date { order: -1; }
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    font-size: .8rem;
+    color: var(--mute);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="masthead">
+      <img class="avatar" src="photo.jpg" alt="Zihan Ding" width="130" height="130">
+      <div class="masthead-text">
+        <h1>Zihan Ding</h1>
+        <p class="tagline">
+          PhD student in Computer Science, Stony Brook University.<br>
+          Human-centered AI for clinical decision support.
+        </p>
+        <ul class="links">
+          <li><a href="mailto:zihding@cs.stonybrook.edu">Email</a></li>
+          <li><a href="cv.pdf">CV</a></li>
+          <li><a href="https://www.linkedin.com/in/zihan-ding-338114211/">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=kwZN3q0AAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/ZihanDing">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <p>
+      I am a PhD student in the Department of Computer Science at
+      <a href="https://www.stonybrook.edu/">Stony Brook University</a>, advised by
+      <a href="https://www3.cs.stonybrook.edu/~fuswang/">Fusheng Wang</a>.
+    </p>
+    <p>
+      My research builds machine learning models for clinical risk prediction that clinicians can
+      actually interrogate — multimodal architectures over structured EHR data and clinical notes,
+      interpretable risk stratification, and decision support tools designed together with the
+      patients and clinicians who will use them.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="theme">
+      <span class="theme-title">Human-centered clinical decision support</span>
+      <p>
+        Within a PCORI-funded project where patients and clinicians co-define prediction targets,
+        features, and evaluation criteria, I build opioid use disorder risk models and the
+        dashboard clinicians use to compare them across cohorts.
+      </p>
+    </div>
+
+    <div class="theme">
+      <span class="theme-title">Multimodal EHR modeling</span>
+      <p>
+        Fusing structured records with unstructured clinical notes at the hidden-state level, using
+        locally deployed LLMs so protected health information stays on-premise and each prediction
+        stays traceable to the documentation behind it.
+      </p>
+    </div>
+
+    <div class="theme">
+      <span class="theme-title">Population health and disparities</span>
+      <p>
+        Registry-scale analyses of vaccination uptake, geographic access, and climate-related
+        health outcomes across Long Island and New York State.
+      </p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <h3>Manuscripts under review</h3>
+
+    <div class="pub">
+      <span class="pub-title">From National Data to Local Evaluation: Benchmarking Machine Learning Models for Perioperative Risk Prediction</span>
+      <span class="pub-meta">
+        <span class="me">Zihan Ding</span>, Grace Han, Tengfei Ma, Fusheng Wang, Janos Hajagos, Tahsin Kurc, Anisha R. Kumar<br>
+        Submitted to the 2027 AMIA Amplify Informatics Summit
+      </span>
+    </div>
+
+    <div class="pub">
+      <span class="pub-title">Beyond the EHR: Patient-Reported Survey Data Improve Prediction of Opioid Use Disorder</span>
+      <span class="pub-meta">
+        Xiyue Jiang, <span class="me">Zihan Ding</span>, Grace Han, Yinan Liu, Richard N. Rosenthal, Fusheng Wang<br>
+        Submitted to the 2027 AMIA Amplify Informatics Summit &middot; co-first author
+      </span>
+    </div>
+
+    <div class="pub">
+      <span class="pub-title">Measuring Stakeholder-Driven Model Change: A Configurable Pipeline to Support Stakeholder-in-the-Loop Clinical AI</span>
+      <span class="pub-meta">
+        Yinan Liu, <span class="me">Zihan Ding</span>, Tengfei Ma, Rachel Wong, Xia Zhao, Xia Zheng, George S. Leibowitz,
+        Ryan DiMeglio, Cari Faith Besserman, Kelly S. Ramsey, Charlene Chen, Richard N. Rosenthal, Fusheng Wang<br>
+        Submitted to the 2027 AMIA Amplify Informatics Summit
+      </span>
+    </div>
+
+    <h3>Journal articles</h3>
+
+    <div class="pub">
+      <a class="pub-title" href="https://doi.org/10.1080/21645515.2025.2487383">Demographic disparities, temporal trends, and geographic patterns of HPV vaccination on Long Island, New York: A comprehensive analysis of immunization registry data (2012&ndash;2023)</a>
+      <span class="pub-meta">
+        <span class="me">Zihan Ding</span>, Jianyuan Deng, Linda Mermelstein, Barbara Nemesure, Tyler Osborne, Fusheng Wang<br>
+        <em>Human Vaccines &amp; Immunotherapeutics</em>, 2025
+      </span>
+    </div>
+
+    <div class="pub">
+      <a class="pub-title" href="https://doi.org/10.1109/ACCESS.2019.2899467">A Parameter-Free Cleaning Method for SMOTE in Imbalanced Classification</a>
+      <span class="pub-meta">
+        Yuanting Yan, Ruiqing Liu, <span class="me">Zihan Ding</span>, Xiuquan Du, Jie Chen, Yanping Zhang<br>
+        <em>IEEE Access</em>, 2019
+      </span>
+    </div>
+
+    <h3>Conference papers</h3>
+
+    <div class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2608.04180">A Comparative Study of Feature Selection Methods for EHR Diagnosis Codes in Opioid Use Disorder Prediction</a>
+      <span class="pub-meta">
+        <span class="me">Zihan Ding</span>, Yinan Liu, Tengfei Ma, Rachel Wong, Xia Zhao, Richard N. Rosenthal, Fusheng Wang<br>
+        <em>AMIA Annual Symposium</em>, 2026 &middot; to appear
+      </span>
+    </div>
+
+    <div class="pub">
+      <span class="pub-title">HIBERT: A Hybrid Clustering BERT for Interpretable Opioid Overdose Risk Prediction</span>
+      <span class="pub-meta">
+        <span class="me">Zihan Ding</span>, Xinyu Dong, Yinan Liu, Tengfei Ma, Xia Zhao, Rachel Wong, Richard N. Rosenthal, Fusheng Wang<br>
+        <em>AMIA Annual Symposium</em>, 2025
+      </span>
+    </div>
+
+    <div class="pub">
+      <a class="pub-title" href="https://doi.org/10.23919/ACC60939.2024.10645001">Fairness-Aware Electric Taxi Fleet Coordination Under Short-Term Power System Failures</a>
+      <span class="pub-meta">
+        Yukun Yuan, <span class="me">Zihan Ding</span>, Shan Lin<br>
+        <em>American Control Conference (ACC)</em>, 2024
+      </span>
+    </div>
+
+    <div class="pub">
+      <a class="pub-title" href="https://doi.org/10.1109/ISKE47853.2019.9170310">Voting Based Constructive Covering Algorithm</a>
+      <span class="pub-meta">
+        <span class="me">Zihan Ding</span>, Ruting Rao, Yuanting Yan, Yanping Zhang<br>
+        <em>IEEE International Conference on Intelligent Systems and Knowledge Engineering (ISKE)</em>, 2019
+      </span>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Ph.D. in Computer Science, Stony Brook University</span>
+      </div>
+      <span class="row-date">2023 &ndash;</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>M.S. in Computer Science, Stony Brook University</span>
+      </div>
+      <span class="row-date">2021 &ndash; 2023</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>B.E. in Computer Science, Anhui University</span>
+      </div>
+      <span class="row-date">2016 &ndash; 2020</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Research Assistant, Stony Brook University</span>
+        <p>Biomedical informatics group of Fusheng Wang</p>
+      </div>
+      <span class="row-date">2022 &ndash;</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Graduate Teaching Assistant, Stony Brook University</span>
+        <p>CSE351 Data Science Fundamentals &middot; CSE527 Computer Vision &middot; CSE581 Theory</p>
+      </div>
+      <span class="row-date">2022</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Software Development Engineer, China Guangfa Bank</span>
+      </div>
+      <span class="row-date">2020 &ndash; 2021</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Product Manager Intern, iFLYTEK</span>
+      </div>
+      <span class="row-date">2019 &ndash; 2020</span>
+    </div>
+  </section>
+
+  <section id="mentoring">
+    <h2>Mentoring</h2>
+
+    <div class="row">
+      <div class="row-main">
+        <span>Undergraduate researcher</span>
+        <p>Multi-horizon opioid use disorder risk prediction using the <em>All of Us</em> cohort</p>
+      </div>
+      <span class="row-date">2025 &ndash;</span>
+    </div>
+
+    <div class="row">
+      <div class="row-main">
+        <span>High school researcher, CSIRE summer program</span>
+        <p>Sequential models for opioid use disorder prediction across heterogeneous EHR sources</p>
+      </div>
+      <span class="row-date">2026</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>Stony Brook, NY &middot; <a href="mailto:zihding@cs.stonybrook.edu">zihding@cs.stonybrook.edu</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
