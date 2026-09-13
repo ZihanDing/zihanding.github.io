@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zihanding.github.io/sitemap.xml
